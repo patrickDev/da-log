@@ -1,0 +1,70 @@
+
+
+<div class="mt-4 row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header text-center">
+                <p>
+                    Please, if you have any question or concern fill out the form below and we’ll get back in touch with you.
+                </p>
+                <p>
+                    We’re always happy to answer your questions and queries. 
+                </p>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="contactForm" (ngSubmit)="contact()">
+                    <div class="row">
+                        <div class="col">
+                            <label for="name">Name</label>
+                            <input id="name" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': contactForm.get('name').touched  && contactForm.get('name').invalid }"
+                            formControlName="name" />
+                        <span class="invalid-feedback">Name can't be blank.</span>
+                        </div>
+                        <div class="col">
+                            <label for="email">Email address</label>
+                            <input id="email" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': contactForm.get('email').touched  && contactForm.get('email').invalid }"
+                            formControlName="email" />
+                        <span class="invalid-feedback">Email can't be blank.</span>
+                        </div>
+                </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input id="subject" 
+                        class="form-control" 
+                        [ngClass]="{ 'is-invalid': contactForm.get('subject').touched  && contactForm.get('subject').invalid }"
+                        formControlName="subject" />
+                       <span class="invalid-feedback">Subject can't be blank.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone">Telephone</label>
+                        <input id="telephone" 
+                        class="form-control" 
+                        [ngClass]="{ 'is-invalid': contactForm.get('telephone').touched  && contactForm.get('telephone').invalid }"
+                        formControlName="telephone" />
+                       <span class="invalid-feedback">Telephone can't be blank.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Message</label>
+                        <textarea id="message" 
+                        class="form-control" 
+                        [ngClass]="{ 'is-invalid': contactForm.get('message').touched  && contactForm.get('message').invalid }"
+                        formControlName="message"></textarea>
+                       <span class="invalid-feedback">Message can't be blank.</span>
+                    </div>
+
+                    <div class="mx-2 d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class=" btn btn-warning">Submit</button>
+                    </div>
+                </form>  
+        </div>
+    </div>
+    </div>
+</div>
+
+

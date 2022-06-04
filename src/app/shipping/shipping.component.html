@@ -1,0 +1,71 @@
+<div class="mt-4 row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header text-center">
+            </div>
+            <div class="card-body">
+                <form [formGroup]="shippingForm" (ngSubmit)="ship()">
+                    <div class="form-group">
+                        <label for="subject">City</label>
+                        <input id="subject" 
+                        class="form-control" 
+                        [ngClass]="{ 'is-invalid': shippingForm.get('subject').touched  && shippingForm.get('subject').invalid }"
+                        formControlName="subject" />
+                       <span class="invalid-feedback">Subject can't be blank.</span>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="name">Sender's Full Name</label>
+                            <input id="name" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': shippingForm.get('name').touched  && shippingForm.get('name').invalid }"
+                            formControlName="name" />
+                        <span class="invalid-feedback">Name can't be blank.</span>
+                        </div>
+                        <div class="col">
+                            <label for="email">Sender's Phone Number</label>
+                            <input id="email" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': shippingForm.get('email').touched  && shippingForm.get('email').invalid }"
+                            formControlName="email" />
+                        <span class="invalid-feedback">Email can't be blank.</span>
+                        </div>
+                </div>
+                    <div class="form-group">
+                        <label for="subject">Pick Up Address</label>
+                        <input id="subject" 
+                        class="form-control" 
+                        [ngClass]="{ 'is-invalid': shippingForm.get('subject').touched  && shippingForm.get('subject').invalid }"
+                        formControlName="subject" />
+                       <span class="invalid-feedback">Subject can't be blank.</span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="name">Receiver's Full Name</label>
+                            <input id="name" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': shippingForm.get('name').touched  && shippingForm.get('name').invalid }"
+                            formControlName="name" />
+                        <span class="invalid-feedback">Name can't be blank.</span>
+                        </div>
+                        <div class="col">
+                            <label for="email">Receiver's WhatsApp number</label>
+                            <input id="email" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': shippingForm.get('email').touched  && shippingForm.get('email').invalid }"
+                            formControlName="email" />
+                        <span class="invalid-feedback">Email can't be blank.</span>
+                        </div>
+                </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-warning">Submit</button>
+                    </div>
+                </form>  
+        </div>
+    </div>
+    </div>
+</div>
+
+
